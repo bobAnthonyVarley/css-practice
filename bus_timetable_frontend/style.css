@@ -1,0 +1,265 @@
+/* @charset "ISO-8859-1"; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+html {
+    font-family: Arial;
+    color: black;
+    /* background-color: rgb(190, 186, 186); */
+    background-color: white;/* rgb(233, 217, 217); */
+}
+
+:root {
+    --BODY-COLOR: rgb(117, 197, 117);
+    --INFO-BOX-COLOR: white;
+
+    --animation-delay: 0.1s;
+    --animation-duration: 1s;
+    --animation-timing-function: linear;
+
+    --animation-iteration-count: 1;
+    --animation-direction: normal;
+    --animation-fill-mode: forwards;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3vw;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+    background-color: var(--BODY-COLOR);
+
+}
+
+main {
+    background-color: rgb(224, 219, 219);
+}
+
+h1 {
+    background-color:  var(--INFO-BOX-COLOR);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: bolder;
+
+    border: solid 2px black;
+    line-height: 3.8rem;
+
+}
+
+summary {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    border: 2px outset black;
+
+    background-color:  var(--INFO-BOX-COLOR);
+    padding: 1.5rem;
+    font-weight: bold;
+
+}
+
+aside {
+    background-color: var(--BODY-COLOR);
+}
+
+
+form {
+	text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    background-color: var(--BODY-COLOR);
+    min-height: 200px;
+}
+
+ul li {
+    background-color: var(--BODY-COLOR);
+    color: var(--BODY-COLOR);
+    border: none;
+    padding: 1.5rem;
+}
+
+aside ul:hover li {
+    
+    /* background-color: var(--BODY-COLOR);
+    color: var(--BODY-COLOR);
+    border: none;
+    padding: 1.5rem; */
+    
+}
+
+aside ul li a, aside ul li a:visited {
+    color: rgb(65, 131, 255, 0);
+    
+}
+
+
+aside ul:hover {
+/*     animation-name: expand;
+    animation-delay:var(--animation-delay);
+    animation-duration: var(--animation-duration);
+    animation-timing-function: var(--animation-timing-function);
+
+    animation-fill-mode: var(--animation-fill-mode);
+    animation-iteration-count: var(--animation-iteration-count);
+    animation-direction: var(--animation-direction); */
+
+    /* animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+}
+
+aside:hover ul li {
+    animation-name: appear;
+
+    animation-delay:var(--animation-delay);
+    animation-duration: var(--animation-duration);
+    animation-timing-function: var(--animation-timing-function);
+
+    animation-fill-mode: var(--animation-fill-mode);
+    animation-iteration-count: var(--animation-iteration-count);
+    animation-direction: var(--animation-direction);
+
+    /* background-color: var(--INFO-BOX-COLOR);
+    border: 2px dashed black;
+    padding: 1.5rem; */
+    
+}
+
+aside ul:hover li a {
+    color: blue;
+    
+    animation-name: link;
+
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+
+
+
+@keyframes expand {
+    0% {
+        transform: scaleY(0);
+    }
+    33% {
+        transform: scaleY(0.8);
+    }
+    66% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scaleY(0);
+        background-color: var(--BODY-COLOR);
+        color: var(--BODY-COLOR);
+
+
+        border: none;
+        padding: 1.5rem;
+    }
+    33% {
+        transform: scaleY(0.8);
+        background-color: #888;
+        color: #888;
+        border: 0.5px solid #000;
+    }
+    66% {
+        transform: scaleY(1);
+        background-color: var(--INFO-BOX-COLOR);
+        color: #000;
+        border: 1px solid #000;
+    }
+    100% {
+        background-color: var(--INFO-BOX-COLOR);
+        color: #000;
+        border: 1px solid #000;
+    }
+}
+
+@keyframes link {
+    0% {
+      color: var(--INFO-BOX-COLOR);
+    }
+    33% {
+      color: #24A0ED;
+    }
+    66% {
+        color: #242bed;
+    }
+    100% {
+        color: blue;
+    }
+    
+}
+
+a {
+    font-weight: bold;
+}
+
+a:visited {
+    /* color: rgba(240, 4, 4, 0.382); */
+    color: crimson;
+}
+
+a:hover {
+    color: rgb(255, 132, 0);
+}
+
+.information {
+	border: 1px outset black;
+    font-family: Helvetica, serif;
+    padding: 0.5rem;
+    
+    margin-top: 0;
+    margin-bottom:0;
+    background-color: rgb(233, 217, 217);
+    color: black;
+
+}
+
+h2 {
+    font-weight: bold;
+    width: 5%;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+footer center a {
+	background-color: #24A0ED;
+	margin: 2rem;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+
+    color: rgb(255, 255, 255);
+    border-radius: 6%;
+    border: 1px solid black;
+}
+
+footer center a:visited {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
